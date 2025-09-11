@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas HTML Esenciales</title>
+</head>
+<style>
+    .etiqueta {
+        color: red;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    main,
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        width: 80%;
+    }
+
+    section {
+        width: 100%;
+        margin-bottom: 40px;
+        border: 1px solid black;
+        border-radius: 8px;
+    }
+
+    p,
+    li,
+    a {
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <main>
+        <h1>Etiquetas HTML Esenciales</h1>
+
+        <section>
+            <h2>&lt;!DOCTYPE html&gt;</h2>
+            <p>La declaración &lt;!DOCTYPE html&gt; indica que se está utilizando HTML5</p>
+        </section>
+
+        <section>
+            <h2>&lt;html&gt;</h2>
+            <p>La etiqueta &lt;html&gt; es la raíz de un documento HTML y envuelve todo el contenido de la página
+                (metadatos, hojas de estilo, scripts, elementos visibles).</p>
+            <h3>Atributos globales: </h3>
+            <p>Estos son algunos de los atributos que están disponibles para todos los elementos dentro de un documento
+                HTML</p>
+            <ul>
+                <li>lang -> Indica el idioma de la página.</li>
+                <li>class -> Especifica el nombre de clases de un elemento HTML (útil para identificación grupal).</li>
+                <li>id -> Especifica el nombre identificador de un elemento HTML (útil para identificación individual).
+                </li>
+                <li>title -> Proporciona información extra al pasar el cursor sobre el elemento HTML.</li>
+                <li>hidden -> Oculta el elemento.</li>
+                <li>data-* -> Almacena información personalizada que un script pueda leer.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>&lt;head&gt;</h2>
+            <p>La etiqueta &lt;head&gt; contiene metadatos, enlaces a hojas de estilo, scripts y el título de la página.
+            </p>
+        </section>
+
+        <section>
+            <h2>&lt;body&gt;</h2>
+            <p>El contenido visible de una página web se encuentra dentro de la etiqueta &lt;body&gt;</p>
+            <h3>Atributos:</h3>
+            <ul>
+                <li>onload -> Le indica a la página qué script ejecutar al cargar.</li>
+                <li>onunload -> Le indica a la página qué script ejecutar al salir.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Encabezados</h2>
+            <p>Los encabezados se utilizan para definir títulos y subtítulos en el contenido de una página. Van desde
+                &lt;h1&gt; (más grande)
+                hasta &lt;h6&gt; (más pequeño).</p>
+            <h1 class="etiqueta">&lt;h1&gt;Encabezado H1&lt;/h1&gt;</h1>
+            <h2 class="etiqueta">&lt;h2&gt;Encabezado H2&lt;/h2&gt;</h2>
+            <h3 class="etiqueta">&lt;h3&gt;Encabezado H3&lt;/h3&gt;</h3>
+            <h4 class="etiqueta">&lt;h4&gt;Encabezado H4&lt;/h4&gt;</h4>
+            <h5 class="etiqueta">&lt;h5&gt;Encabezado H5&lt;/h5&gt;</h5>
+            <h6 class="etiqueta">&lt;h6&gt;Encabezado H6&lt;/h6&gt;</h6>
+        </section>
+
+        <section>
+            <h2>Lista ordenada &lt;ol&gt;</h2>
+            <ol class="etiqueta">
+                <li>Elemento</li>
+                <li>Elemento</li>
+                <li>Elemento</li>
+            </ol>
+            <p>La lista ordenada &lt;ol&gt; &lt;/ol&gt; se utiliza junto con su etiqueta hija &lt;li&gt; para agrupar y
+                ordenar elementos.</p>
+            <h3>Atributos</h3>
+            <ul>
+                <li>type (ol) -> Estilo de ordenamiento (decimal, alfabético, romano).</li>
+                <li>start (ol) -> Número de inicio de la lista.</li>
+                <li>reversed (ol) -> Orden inverso de numeración.</li>
+                <li>value (li) -> Especifica un valor para un elemento de la lista.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Lista desordenada &lt;ul&gt;</h2>
+            <ul class="etiqueta">
+                <li>Elemento</li>
+                <li>Elemento</li>
+                <li>Elemento</li>
+            </ul>
+            <p>La lista desordenada &lt;ul&gt; &lt;/ul&gt; se utiliza junto con su etiqueta hija &lt;li&gt; para agrupar
+                elementos
+                sin orden específico.</p>
+        </section>
+
+        <section>
+            <h2>Párrafo &lt;p&gt;</h2>
+            <p class="etiqueta">Las etiquetas &lt;p&gt; &lt;/p&gt; son utilizadas para agrupar líneas de texto que
+                describen contenido de
+                una página.</p>
+        </section>
+
+        <section>
+            <h2>Imágen &lt;img&gt;</h2>
+            <img src="https://picsum.photos/200" alt="Imagen aleatoria de lorem picsum">
+            <p>Las etiqueta &lt;img&gt; es utilizada para insertar una imágen en una página web.</p>
+            <h3>Atributos:</h3>
+            <ul>
+                <li>src -> Especifica la ruta de la imágen.</li>
+                <li>alt -> Texto alternativo que describe la imágen.</li>
+                <li>width -> Ancho de la imágen en píxeles o porcentaje.</li>
+                <li>height -> Alto de la imágen en píxeles o porcentaje.</li>
+                <li>loading -> Modo de carga de la imágen (lazy o eager).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Enlace &lt;a&gt;</h2>
+            <p>Las etiquetas &lt;a&gt; &lt;/a&gt; son utilizadas para definir un <a href="https://www.utez.edu.mx/"
+                    class="etiqueta" target="_blank">enlace</a></p>
+            <h3>Atributos:</h3>
+            <ul>
+                <li>href -> Destino del enlace.</li>
+                <li>target -> Indica dónde se abre el enlace (_blank, _parent, _self, _top).</li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+
+</html>
